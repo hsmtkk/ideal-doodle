@@ -4,8 +4,5 @@ build:
 postgres:
 	docker stack deploy -c docker-compose.yml postgres
 
-heroku-push:
-	heroku container:push web
-
-heroku-release: heroku-push
-	heroku container:release web
+heroku-release:
+	git push heroku main
