@@ -1,20 +1,21 @@
-name: Rust
+---
+name: default
 
 on: [push]
 
 jobs:
 
-  yaml-lint:
+  yamllint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: yaml-lint
         uses: ibiqlik/action-yamllint@v3
-  
+
   hadolint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2 
+      - uses: actions/checkout@v2
       - uses: hadolint/hadolint-action@v1.6.0
         with:
           ignore: DL3006
