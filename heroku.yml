@@ -1,0 +1,9 @@
+build:
+  docker:
+    web: Dockerfile
+release:
+  image: web
+  command:
+    - /usr/local/bin/init_database
+run:
+  web: /usr/local/bin/ideal-doodle
