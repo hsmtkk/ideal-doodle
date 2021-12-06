@@ -6,4 +6,7 @@ release:
   command:
     - /usr/local/bin/init_database
 run:
-  web: /usr/local/bin/ideal-doodle
+  web:
+    image: web
+    command:
+      - /usr/local/bin/ideal-doodle

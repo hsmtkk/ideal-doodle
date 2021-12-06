@@ -15,4 +15,3 @@ RUN cargo build --release
 FROM gcr.io/distroless/cc-debian11 AS runtime
 COPY --from=builder /opt/target/release/ideal-doodle /usr/local/bin/ideal-doodle
 COPY --from=builder /opt/target/release/init_database /usr/local/bin/init_database
-ENTRYPOINT ["/usr/local/bin/ideal-doodle"]
