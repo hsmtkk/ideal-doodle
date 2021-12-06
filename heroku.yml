@@ -1,5 +1,0 @@
-build:
-  docker:
-    web: Dockerfile
-run:
-  web: /usr/local/bin/print_env_vars
